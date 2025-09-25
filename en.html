@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Eric Fassiau - Expert Polymères</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <script
+      src="https://kit.fontawesome.com/ca71dbf907.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Josefin Sans"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header>
+      <img class="logo" src="/images/logo_EFv2.png" />
+      <div class="menu">
+        <div class="nav">
+          <a href="#accueil"><div class="acc_nav">Home</div></a>
+          <a href="#services"><div class="services_nav">Services</div></a>
+          <a href="#propos"><div class="propos_nav">About me</div></a>
+          <a href="#contact"><div class="contact_nav">Contact</div></a>
+        </div>
+        <div class="lang">
+          <a href="index.html"><div class="FR">FR</div></a>
+          <a href="en.html"
+            ><div class="EN" style="font-weight: bold">EN</div></a
+          >
+        </div>
+      </div>
+    </header>
+    <main>
+      <button id="backToTop"><i class="fa-solid fa-arrow-up"></i></button>
+
+      <div class="accueil" id="accueil">
+        <div class="name">Eric Fassiau</div>
+        <div class="name">Polymers specialist (thermoplastics)</div>
+        <div class="text3">Selection, Processing, Recycling & Composites</div>
+        <img class="picture" src="/images/eric_fassiau.jpg" />
+        <div class="text2">40 years of experience in support of businesses</div>
+      </div>
+      <div class="services" id="services">
+        <div class="services_title">Services</div>
+        <div class="services_box">
+          <div class="box">
+            <h1>Thermoplastics - Selection:</h1>
+
+            <h2>
+              Help in selecting the polymer, grade, and processing technique
+              based on customer requirements
+            </h2>
+            <ul>
+              <li>Mechanical performance</li>
+              <li>Thermal resistance</li>
+              <li>Chemical resistance</li>
+              <li>Long-terme stability</li>
+              <li>Food contact</li>
+              <li>Cost</li>
+            </ul>
+          </div>
+          <div class="box">
+            <h1>Thermoplastics - Processing / Recycling / Composites:</h1>
+
+            <h2>Support for selecting processing equipment</h2>
+            <ul>
+              <li>Participation in the development of a specification</li>
+              <li>Contacts with suppliers</li>
+              <li>Assistance with the final selection</li>
+            </ul>
+            <h2>Help in processing on existing lines</h2>
+            <ul>
+              <li>Technical verification of the line</li>
+              <li>
+                Optimization of operating conditions in collaboration with the
+                existing teams
+              </li>
+              <li>Maximization of productivity</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="propos" id="propos">
+        <div class="propos_title">About me</div>
+        <div class="propos_txt">
+          I offer technical support to businesses in selecting, transforming and
+          recycling thermoplastics.
+          <p>
+            After 40 years working in production, transformation, evaluation,
+            commercialisation and recycling of thermoplastics, I have decided to
+            use that experience to help businesses in this field of work.
+          </p>
+
+          <p>
+            Chemical Engineer by training, I am committed to sharing my
+            experience but also my motivation, my pragmatism and my team spirit.
+            I offer flexible support adapted to the needs of customers by
+            offering profitable and sustainable solutions.
+          </p>
+        </div>
+        <img src="/images/polymers.jpg" class="polymers" />
+      </div>
+      <div class="contact" id="contact">
+        <div class="contacts_txt">Contact</div>
+        <div class="mail_num">
+          <a href="mailto:eric.fassiau@gmail.com"
+            ><p>
+              <i class="fa-solid fa-envelope"></i>eric.fassiau@gmail.com
+            </p></a
+          >
+          <p><i class="fa-solid fa-phone"></i>+32 479 97 32 49</p>
+          <p>
+            <a href="https://www.linkedin.com/in/eric-fassiau-71537918/"
+              ><i class="fa-brands fa-linkedin"></i> Eric Fassiau</a
+            >
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer_txt">​© 2025 Cyril Fassiau</div>
+    </footer>
+  </body>
+
+  <script>
+    const backToTop = document.getElementById("backToTop");
+
+    // Affiche le bouton quand on scrolle un peu
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 200) {
+        backToTop.style.display = "flex";
+      } else {
+        backToTop.style.display = "none";
+      }
+    });
+
+    // Scroll vers le haut + reset URL
+    backToTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+
+      // Supprime le hash (#contact, #services, etc.) de l'URL
+      if (window.location.hash) {
+        history.replaceState(
+          null,
+          null,
+          window.location.pathname + window.location.search
+        );
+      }
+    });
+  </script>
+</html>
