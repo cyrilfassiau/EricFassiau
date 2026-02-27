@@ -1,6 +1,7 @@
 :root {
   --font-title: "Josefin Sans", sans-serif;
-  --font-text: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --font-text:
+    "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   --primary: #4374a2;
   --primary-dark: #354b8a;
   --bg-soft: #f7f9fb;
@@ -141,7 +142,11 @@ header {
 
 .accueil {
   min-height: 550px;
-  background: linear-gradient(180deg, rgba(67, 116, 162, 1) 0%, rgba(133, 174, 212, 1) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(67, 116, 162, 1) 0%,
+    rgba(133, 174, 212, 1) 100%
+  );
   text-align: center;
   padding: 56px 16px 40px;
   color: #fff;
@@ -227,23 +232,31 @@ header {
   justify-content: center;
   margin-top: 32px;
   margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
   flex-wrap: wrap;
 }
 
 .box {
   background-color: rgb(248, 244, 244);
-  width: min(420px, 100%);
+  width: min(320px, 100%);
   border-radius: 26px;
   text-align: center;
   display: flex;
   flex-direction: column;
-  padding: 18px 18px 16px;
-  min-height: 420px;
+  padding: 20px 20px 18px;
+
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.18);
-  transition: transform 260ms cubic-bezier(0.2, 0.9, 0.2, 1), box-shadow 260ms cubic-bezier(0.2, 0.9, 0.2, 1);
+  transition:
+    transform 260ms cubic-bezier(0.2, 0.9, 0.2, 1),
+    box-shadow 260ms cubic-bezier(0.2, 0.9, 0.2, 1);
   will-change: transform, box-shadow;
   transform-origin: center center;
   color: var(--primary);
+}
+
+.bottom {
+  width: min(450px, 100%) !important;
 }
 
 .box:hover,
@@ -329,7 +342,9 @@ header {
   border-radius: 26px;
   margin-top: 42px;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
-  transition: transform 260ms cubic-bezier(0.2, 0.9, 0.2, 1), box-shadow 260ms cubic-bezier(0.2, 0.9, 0.2, 1);
+  transition:
+    transform 260ms cubic-bezier(0.2, 0.9, 0.2, 1),
+    box-shadow 260ms cubic-bezier(0.2, 0.9, 0.2, 1);
   will-change: transform, box-shadow;
   transform-origin: center center;
 }
@@ -409,7 +424,9 @@ footer {
   align-items: center;
   justify-content: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-  transition: opacity 0.3s ease, transform 0.2s ease;
+  transition:
+    opacity 0.3s ease,
+    transform 0.2s ease;
   z-index: 9999;
 }
 
